@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">FirebaseContacts</string>
+
+    <string name="email_tv_text">Email</string>
+    <string name="enter_email_text">Enter Email</string>
+    <string name="password_tv_text">Password</string>
+    <string name="enter_password_text">Enter password</string>
+    <string name="login_text">Войти</string>
+    <string name="registration_required_text">Необходима регистрация</string>
+    <string name="back_text">Назад</string>
+    <string name="confirm_password_text">Confirm password</string>
+    <string name="sign_up_text">Зарегистрироваться</string>
+    <string name="already_have_account_text">Уже есть аккаунт</string>
+    <string name="text">Имя</string>
+    <string name="phone_number">номер</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+</resources>

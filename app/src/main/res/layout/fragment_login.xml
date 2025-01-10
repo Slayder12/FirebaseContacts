@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginFragment">
+
+    <LinearLayout
+        android:id="@+id/inputPad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/email_tv_text"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="15sp"
+
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"/>
+
+        <EditText
+            android:id="@+id/emailLoginET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/widget_border"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:hint="@string/enter_email_text"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/password_tv_text"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"/>
+
+        <EditText
+            android:id="@+id/passwordLoginTV"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="20dp"
+            android:inputType="textPassword"
+            android:background="@drawable/widget_border"
+            android:textColor="@color/black"
+            android:hint="@string/enter_password_text"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/loginBTN"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="2dp"
+            android:text="@string/login_text"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/redirectSignUpTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/registration_required_text"
+            android:textColor="@color/blue"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
