@@ -1,4 +1,4 @@
-package com.example.firebasecontacts
+package com.example.firebasecontacts.utils
 
 import android.content.Context
 import android.widget.Toast
@@ -50,6 +50,7 @@ class Validator(private val context: Context) {
         }
         if (!isValidEmail(email)){
             toast("Некорректный ввод")
+            return false
         }
 
         if (password.isBlank()) {
@@ -58,8 +59,6 @@ class Validator(private val context: Context) {
         }
         return true
     }
-
-
 
     private fun isValidEmail(email: String): Boolean {
 
@@ -83,6 +82,30 @@ class Validator(private val context: Context) {
             return false
         }
 
+        return true
+    }
+
+    fun userValidate(name: String, phoneNumber: String): Boolean {
+        if (name.isBlank() && phoneNumber.isBlank()) {
+            toast("Имя и номер телефона не могут быть пустыми")
+            return false
+        }
+        if (name.isBlank()) {
+            toast("Введите Имя")
+            return false
+        }
+        if (name.length !in 2..32) {
+            toast("Введите корректное имя")
+            return false
+        }
+        if (phoneNumber.isBlank()) {
+            toast("Введите номер телефона")
+            return false
+        }
+        if (phoneNumber.length !in 11..16) {
+            toast("Введите корректный номер")
+            return false
+        }
         return true
     }
 

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainFragment">
+    tools:context=".ui.main.MainFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Имя"
+            android:text="@string/name_text"
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="15sp"
@@ -30,14 +30,14 @@
             android:layout_marginEnd="10dp"
             android:background="@drawable/widget_border"
             android:textColor="@color/black"
-            android:textSize="20dp"
-            android:hint="Введите имя"
+            android:textSize="20sp"
+            android:hint="@string/input_name_text"
             android:textAlignment="center" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Номер телефона"
+            android:text="@string/phone_number_text"
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="15sp"
@@ -52,11 +52,11 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:inputType="phone"
             android:background="@drawable/widget_border"
             android:textColor="@color/black"
-            android:hint="Введите номер телефона"
+            android:hint="@string/input_phone_number_text"
             android:textAlignment="center"/>
 
         <Button
@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Сохранить"
+            android:text="@string/save_text"
             android:textSize="18sp"/>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -79,11 +79,12 @@
     <Button
         android:id="@+id/backBTN"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_gravity="bottom"
         android:text="@string/back_text"
-        android:textColor="@color/black"
+
+        android:textColor="@color/white"
         android:textSize="20sp" />
 
 </FrameLayout>

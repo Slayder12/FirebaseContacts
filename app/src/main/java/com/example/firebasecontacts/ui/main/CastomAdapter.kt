@@ -1,19 +1,21 @@
-package com.example.firebasecontacts
+package com.example.firebasecontacts.ui.main
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.firebasecontacts.R
+import com.example.firebasecontacts.models.UserModel
 
-class CustomAdapter(private val personList: MutableList<User>) :
+class CustomAdapter(private val userList: MutableList<UserModel>) :
 RecyclerView.Adapter<CustomAdapter.ItemViewHolder>()
 {
 
     private var onItemClickListener: OnItemClickListener? = null
 
     interface OnItemClickListener {
-        fun onItemClick(person: User, position: Int)
+        fun onItemClick(person: UserModel, position: Int)
     }
 
     class ItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
@@ -27,24 +29,24 @@ RecyclerView.Adapter<CustomAdapter.ItemViewHolder>()
         return ItemViewHolder(itemView)
     }
 
-    override fun getItemCount() = personList.size
+    override fun getItemCount() = userList.size
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val person = personList[position]
+        val user = userList[position]
 
-        holder.nameTV.text = person.name
-        holder.phoneNumberTV.text = person.phoneNumber
+        holder.nameTV.text = user.name
+        holder.phoneNumberTV.text = user.phoneNumber
 
         holder.itemView.setOnClickListener{
             if (onItemClickListener != null){
-                onItemClickListener!!.onItemClick(person, position)
+                onItemClickListener!!.onItemClick(user, position)
             }
         }
-
     }
 
     fun setOnItemClickListener(onItemClickListener: OnItemClickListener){
         this.onItemClickListener = onItemClickListener
     }
+
 
 }

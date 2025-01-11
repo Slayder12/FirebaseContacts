@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment">
+    tools:context=".ui.LoginFragment">
 
     <LinearLayout
         android:id="@+id/inputPad"
@@ -32,7 +32,7 @@
             android:layout_marginEnd="2dp"
             android:background="@drawable/widget_border"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:hint="@string/enter_email_text"
             android:textAlignment="center" />
 
@@ -54,7 +54,7 @@
             android:layout_marginStart="2dp"
             android:layout_marginEnd="2dp"
             android:layout_marginBottom="16dp"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:inputType="textPassword"
             android:background="@drawable/widget_border"
             android:textColor="@color/black"
@@ -67,7 +67,7 @@
             android:layout_height="60dp"
             android:layout_margin="2dp"
             android:text="@string/login_text"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -76,6 +76,7 @@
             android:layout_height="match_parent"
             android:text="@string/registration_required_text"
             android:textColor="@color/blue"
+
             android:visibility="gone"
             android:gravity="center"
             android:textStyle="bold"

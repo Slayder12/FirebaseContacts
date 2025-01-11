@@ -1,4 +1,4 @@
-package com.example.firebasecontacts
+package com.example.firebasecontacts.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.example.firebasecontacts.R
+import com.example.firebasecontacts.utils.Validator
 import com.example.firebasecontacts.databinding.FragmentLoginBinding
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -28,6 +30,8 @@ class LoginFragment : Fragment() {
         binding.loginBTN.setOnClickListener{
             login()
         }
+        binding.emailLoginET.setText("example@mail.com")
+        binding.passwordLoginTV.setText("qwerty")
 
         binding.redirectSignUpTV.setOnClickListener{
             val navController = findNavController()

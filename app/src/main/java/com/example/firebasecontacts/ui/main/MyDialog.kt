@@ -1,10 +1,13 @@
-package com.example.firebasecontacts
+package com.example.firebasecontacts.ui.main
 
 import android.app.Dialog
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
+import com.example.firebasecontacts.R
+import com.example.firebasecontacts.models.UserModel
+import com.example.firebasecontacts.utils.Removable
 
 class MyDialog: DialogFragment() {
 
@@ -15,7 +18,7 @@ class MyDialog: DialogFragment() {
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val user = arguments?.getSerializable("user") as? User
+        val user = arguments?.getSerializable("user") as? UserModel
         val builder = AlertDialog.Builder(
             requireActivity()
         )
@@ -26,7 +29,7 @@ class MyDialog: DialogFragment() {
             .setCancelable(true)
             .setPositiveButton("Да") { _, _ ->
                 removable?.remove(user)
-                Toast.makeText(context, "Cотрудник, ${user?.name} удалён", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Удаление, ${user?.name}", Toast.LENGTH_SHORT).show()
             }
             .setNegativeButton("Нет") { _, _ -> }
             .create()
