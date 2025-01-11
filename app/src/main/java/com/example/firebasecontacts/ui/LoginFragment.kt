@@ -30,8 +30,8 @@ class LoginFragment : Fragment() {
         binding.loginBTN.setOnClickListener{
             login()
         }
-        binding.emailLoginET.setText("example@mail.com")
-        binding.passwordLoginTV.setText("qwerty")
+//        binding.emailLoginET.setText("example@mail.com")
+//        binding.passwordLoginTV.setText("qwerty")
 
         binding.redirectSignUpTV.setOnClickListener{
             val navController = findNavController()
